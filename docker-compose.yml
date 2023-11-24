@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "stock_viewing_class_image"
+    container_name: stock-viewing
+    ports:
+      - "5005-5000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_DEBUG: "1"
